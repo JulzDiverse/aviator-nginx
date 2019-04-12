@@ -11,6 +11,6 @@ squash:
   - dir: {{specs/}}
   to: final.yaml
 
-#kubectl:
-  #apply:
-    #file: final.yaml
+kubectl:
+  apply:
+    file: final.yaml
