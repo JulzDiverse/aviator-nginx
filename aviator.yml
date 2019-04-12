@@ -1,16 +1,16 @@
 spruce:
 - base: values.yaml
-  prune:
-  - meta
   for_each:
     in: templates/
-  to_dir: {{specs}}
+  prune:
+  - meta
+  to_dir: {{output/}}
 
 squash:
   contents:
-  - dir: {{specs/}}
-  to: final.yaml
+  - dir: {{output/}}
+  to: nginx.yaml
 
 kubectl:
   apply:
-    file: final.yaml
+    file: nginx.yaml
