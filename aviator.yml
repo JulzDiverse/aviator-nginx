@@ -1,0 +1,16 @@
+spruce:
+- base: values.yaml
+  prune:
+  - meta
+  for_each:
+    in: templates/
+  to_dir: {{specs}}
+
+squash:
+  contents:
+  - dir: {{specs/}}
+  to: final.yaml
+
+#kubectl:
+  #apply:
+    #file: final.yaml

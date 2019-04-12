@@ -1,0 +1,4 @@
+meta:
+  deployment_name: nginx-deployment
+  service_name: nginx-service
+  replicas: 2
